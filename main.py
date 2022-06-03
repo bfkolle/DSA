@@ -5,9 +5,7 @@ def main():
     stack = Stack()
 
     stack.peek()
-    stack.push("Hello")
-    stack.push("World")
-    stack.push("!")
+
     print("Value at top after three pushes:", stack._list[0])
 
     stack.pop()
