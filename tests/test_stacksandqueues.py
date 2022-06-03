@@ -20,10 +20,11 @@ def test_peek_returns_topstackvalue():
     stack = getteststack()
     assert stack._list[0] == stack.peek()
 
-def test_valueontop_is_lastpushedvalue():
-    stack = getteststack()
+def test_push_adds_valuetostack():
+    stack = getemptyteststack()
     stack.push("Hello")
-    stack.push("World")
-    stack.push("!")
+    assert stack.peek() == "Hello"
 
+def test_push_adds_valuetotopofstack():
+    stack = getteststack()
     assert stack.peek() == "!"
