@@ -28,3 +28,12 @@ def test_push_adds_valuetostack():
 def test_push_adds_valuetotopofstack():
     stack = getteststack()
     assert stack.peek() == "!"
+
+def test_pop_removes_topofstack():
+    stack = getteststack()
+    stack.pop()
+    assert stack.peek() == "World"
+
+def test_pop_returns_topofstack():
+    stack = getteststack()
+    assert stack.pop() == "!"
