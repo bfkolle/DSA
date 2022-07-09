@@ -11,7 +11,9 @@ class Stack:
             self._list.insert(0, item)
 
     def pop(self):
+        removed_item = self._list[0]
         self._list.remove(self._list[0])
+        return removed_item
 
     def peek(self):
         return None if self.isEmpty() else self._list[0]
